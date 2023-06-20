@@ -1,0 +1,152 @@
+:root {
+    --couleur : blue ;
+    --glisseGauche : glisseGauche 1000ms ;
+    --glisseDroite : glisseDroite 1000ms ;
+}
+
+colors{
+color : #e5989b  #ffb4a2 #b5838d #6d6875 #ffcdb2 ;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d08486; 
+}
+
+h1{
+    margin: 0%;
+    padding: 5px 100px;
+    font-family:sans-serif;
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.715);
+    border : solid ;
+    box-shadow: 10px 5px 5px #e5989b6a;
+    border-radius: 5% 30%;
+    background-color: var(--couleur);
+}
+
+#cadreTotal {
+    margin: 1rem ;
+    box-shadow: 5px 10px 5px  #b67274a7;
+}
+#cadreTitre {
+    font :2rem bold , Arial;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+img { 
+    margin: 15%;
+    width: 400px;
+    height: auto;
+    border-radius: 15%;  
+    object-fit: scale-down;
+    
+}
+
+#cadrePhoto{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content :space-around;
+    align-items: center;
+    width: 500px;
+    height: 600px ;
+    background-color: #ffb5a27f ;
+    border-radius: 5% 5% 0% 0% ;
+    
+}
+
+button{
+    width : 40px ;
+    height: 40px;
+    padding: 2px ;
+    box-shadow: 2px 2px ;
+    border-radius: 50%;
+
+    border: 1px solid black;
+}
+
+button:active {
+  animation: animBouton 100ms ;
+    
+}
+
+button:hover {
+    animation: animBoutonSize 1000ms ;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background-color: inherit;
+  }
+  
+@keyframes animBoutonColor {
+    from {
+    background-color: #e6e6e6 ;
+    }
+    to {
+    background-color: #37f308 ;
+    }
+}
+
+@keyframes animBoutonSize{
+    from {
+     transform: scale(1);
+    }
+    to {
+        transform: scale(2);
+    }
+}
+
+@keyframes glisseVersGauche{
+    from {
+     transform: translate(10%);
+     opacity: 0 ;
+    }
+    to {
+        transform: translate(0%);
+        opacity: 1 ;
+    }
+}
+
+@keyframes glisseVersDroite{
+    from {
+     transform: translate(-10%);
+     opacity: 0 ;
+    }
+    to {
+        transform: translate(0%);
+        opacity: 1 ;
+    }
+}
+
+#avance {
+    display: inline-block;
+    position: absolute;
+    top : 50% ;
+    right : 5% ;
+}
+
+#recule {   
+    display: inline-block;
+    position: absolute;
+    top : 50% ;
+    left : 5% ;
+}
+
+
+.recule:hover {   
+ background-color: red;
+}
+
+
+#cadreTitre{
+    width: 500px;
+    background-color: #b5838d ;
+    border-radius: 0% 0% 5% 5%  ;
+}
+
