@@ -8,6 +8,13 @@ colors{
 color : #e5989b  #ffb4a2 #b5838d #6d6875 #ffcdb2 ;
 }
 
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
 body{
     display: flex;
     flex-direction: column;

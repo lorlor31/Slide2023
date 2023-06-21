@@ -1,3 +1,8 @@
+// comment faire pour que qd on est à la 1ère photo, la fleche recule s'affiche en rouge que sur le hover ?
+//création d'une classe à attribuer à  l'element recule?
+
+// cmt créer un diaporama sur cette base ?? ?? ??
+
 // le début c'est des essais avec JSON et tableaux 
 //et classes parce que je ne vois pas l'utilité pour l'instant
 
@@ -87,7 +92,7 @@ function reculer (){
     if (c===0) {
         
         photoEnCours=photoEnCours
-        recule.classList.add(".recule:hover")
+        recule.classList.add("recule:hover")
         console.log(recule)
     }
     else if (c>=max){
@@ -127,8 +132,6 @@ function attribuerPhotoEtTitreAAfficher () {
     }
     photo.setAttribute("id","photo" )
     cadrePhoto.appendChild(photo)
-    let answer = photo.hasAttribute("style");
-    console.log(answer)
     photoEnCours=photosTABL[c]
     let photo_fichier="photos/" +photoEnCours.fichier
     photo.setAttribute("src",photo_fichier )
@@ -143,6 +146,12 @@ function attribuerPhotoEtTitreAAfficher () {
     //photo.removeAttribute("style")
 }
 
+function diaporama () {
+    for (let photo of photosTABL) {
+        console.log(photo)
+        attribuerPhotoEtTitreAAfficher()
+    }
+}
 // Utilisation de variables CSS -Essai
 // dans le CSS on crée une variable ans le selecteur root au préalable cf fichier css
 
